@@ -3,7 +3,7 @@
 ## TODO
 
 - [ ] deploy to vercel
-- [ ] add material ui
+- [x] add material ui
 - [ ] add components scaffolding
 - [ ] add data fetching
 - [ ] add routing

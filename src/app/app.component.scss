@@ -1,9 +1,5 @@
 .main {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin-inline: auto;
-  justify-content: center;
-  gap: 10px;
+  flex-direction: column;
+  min-height: 100vh;
 }

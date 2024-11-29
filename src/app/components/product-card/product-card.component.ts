@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
@@ -9,4 +9,10 @@ import { MatCardModule } from '@angular/material/card';
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss',
 })
-export class ProductCardComponent {}
+export class ProductCardComponent {
+  @Input() title = '';
+  @Input() category = '';
+  @Input() imageUrl = '';
+  @Input() description = '';
+  @Input() id = 0;
+}

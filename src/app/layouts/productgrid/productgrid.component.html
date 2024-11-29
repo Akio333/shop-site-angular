@@ -1,8 +1,4 @@
 <div>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
+  <app-product-card *ngFor="let card of cardsData" [id]="card.id" [title]="card.title" [category]="card.category"
+    [description]="card.description" [imageUrl]="card.image"></app-product-card>
 </div>

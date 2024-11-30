@@ -1,11 +1,13 @@
 <mat-card class="example-card" appearance="outlined">
   <mat-card-header>
-    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-title class="ellipsis ellipsis-title">{{title}}</mat-card-title>
     <mat-card-subtitle>{{category}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="imageUrl" [alt]="title + ' product image'">
+  <div class="image-wrapper">
+    <img mat-card-image [src]="imageUrl" [alt]="title + ' product image'">
+  </div>
   <mat-card-content>
-    <p>
+    <p class="ellipsis">
       {{description}}
     </p>
   </mat-card-content>

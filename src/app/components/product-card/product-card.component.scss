@@ -8,7 +8,30 @@ mat-card {
 }
 
 img {
-  width: 200px;
+  height: 200px;
   margin-inline: auto;
   mix-blend-mode: multiply;
+}
+
+.image-wrapper {
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
+  margin-inline: 8px;
+  overflow: hidden;
+}
+
+.ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis-title {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  height: 64px;
 }

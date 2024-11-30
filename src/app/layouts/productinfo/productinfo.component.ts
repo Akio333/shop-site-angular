@@ -15,7 +15,7 @@ import { NgIf } from '@angular/common';
   styleUrl: './productinfo.component.scss',
 })
 export class ProductinfoComponent implements OnInit, OnDestroy {
-  productId: number = 0;
+  productId = 0;
   data!: CardData;
   isLoading = true;
   routeSub!: Subscription;

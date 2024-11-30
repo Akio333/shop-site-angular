@@ -1,4 +1,4 @@
-div {
+.cardgrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -6,6 +6,10 @@ div {
   padding-block: 10px;
   max-width: 1200px;
   margin-inline: auto;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
 }
 
 .spinner {

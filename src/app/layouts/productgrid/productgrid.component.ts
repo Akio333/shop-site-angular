@@ -33,7 +33,7 @@ export class ProductgridComponent implements OnInit, OnDestroy {
         throttle(() => interval(100)),
         tap(() => {
           let isBottom =
-            window.innerHeight + Math.round(window.scrollY) >=
+            window.innerHeight + window.scrollY >=
             document.body.offsetHeight - 50;
           if (isBottom) {
             this.getProductsDynamic();

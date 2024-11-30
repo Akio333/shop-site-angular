@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
 import { CardsDataService } from '../../services/cards-data.service';
 import { CardData } from '../../modals/card-data';

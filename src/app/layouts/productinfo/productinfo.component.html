@@ -1,1 +1,18 @@
-<p>productinfo works!</p>
+<div class="container">
+  <div class="image">
+    <img [src]="data.image" [alt]="data.title + ' image'">
+  </div>
+  <div class="content">
+    <div class="title">
+      <h2>{{data.title}}</h2>
+      <p>{{data.category}}</p>
+    </div>
+    <div class="desc">
+      <p>{{data.description}}</p>
+    </div>
+    <div class="cta">
+      <div class="price">${{data.price}}</div>
+      <a [href]="'/'" mat-button>VIEW</a>
+    </div>
+  </div>
+</div>

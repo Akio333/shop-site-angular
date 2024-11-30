@@ -14,4 +14,8 @@ export class CardsDataService {
   getAllProducts(): Observable<CardData[]> {
     return this.httpClient.get<CardData[]>(this.url + 'products');
   }
+
+  getProductDetail(id: number): Observable<CardData> {
+    return this.httpClient.get<CardData>(this.url + 'products/' + id);
+  }
 }

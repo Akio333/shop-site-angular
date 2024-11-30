@@ -1,20 +1,23 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CardData } from '../../modals/card-data';
 import { CardsDataService } from '../../services/cards-data.service';
-import { ActivatedRoute, Route, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-productinfo',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, NgIf, MatProgressSpinnerModule],
   templateUrl: './productinfo.component.html',
   styleUrl: './productinfo.component.scss',
 })
 export class ProductinfoComponent implements OnInit, OnDestroy {
   productId: number = 0;
   data!: CardData;
+  isLoading = true;
   routeSub!: Subscription;
   productSub!: Subscription;
 
@@ -29,7 +32,10 @@ export class ProductinfoComponent implements OnInit, OnDestroy {
     );
     this.productSub = this.cardDataService
       .getProductDetail(this.productId)
-      .subscribe((data) => (this.data = data));
+      .subscribe((data) => {
+        this.data = data;
+        this.isLoading = false;
+      });
   }
 
   ngOnDestroy(): void {

@@ -35,3 +35,9 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+.spinner {
+  min-height: calc(100vh - 100px);
+  display: grid;
+  place-items: center;
+}

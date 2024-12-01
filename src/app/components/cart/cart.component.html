@@ -1,6 +1,10 @@
-<button class="cart" matBadge="15" matBadgeColor="warn">
+<button class="cart" [matMenuTriggerFor]="menu" matBadge="15" matBadgeColor="warn">
   <img src="./cart.svg" alt="cart">
   <span class="cdk-visually-hidden">
     your cart
   </span>
 </button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item class="last-btn">Checkout</button>
+</mat-menu>

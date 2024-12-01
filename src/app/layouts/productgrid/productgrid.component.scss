@@ -10,10 +10,6 @@
   justify-content: center;
   gap: 10px;
   padding-block: 10px;
-
-  @media (min-width: 768px) {
-    justify-content: flex-start;
-  }
 }
 
 .tools {

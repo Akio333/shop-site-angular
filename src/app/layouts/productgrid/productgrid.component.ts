@@ -46,7 +46,7 @@ export class ProductgridComponent implements OnInit, OnDestroy {
 
     this.scrollSub = fromEvent(document, 'scroll')
       .pipe(
-        throttle(() => interval(100)),
+        throttle(() => interval(50)),
         tap(() => {
           const isBottom =
             window.innerHeight + window.scrollY >=

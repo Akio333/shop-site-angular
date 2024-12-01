@@ -11,9 +11,8 @@
 - [x] add product detail
 - [x] migrate to nx workspace
 - [x] enable nx caching
-- [ ] add search
-- [ ] add cart
 - [ ] add sorting & category
+- [ ] add cart
 - [ ] add checkout page
 - [ ] add login & route guards
 - [ ] ssr

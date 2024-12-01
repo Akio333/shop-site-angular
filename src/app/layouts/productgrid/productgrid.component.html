@@ -2,6 +2,10 @@
   <mat-spinner></mat-spinner>
 </div>
 
+<div class="tools" *ngIf="!isLoading">
+  <app-category [categoryList]="categories" (categoryEvent)="handleCategoryChange($event)"></app-category>
+</div>
+
 <div class="cardgrid" *ngIf="!isLoading">
   <app-product-card *ngFor="let card of cardsData" [id]="card.id" [title]="card.title" [category]="card.category"
     [description]="card.description" [imageUrl]="card.image"></app-product-card>

@@ -7,15 +7,19 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CardsDataService {
-  url = 'https://fakestoreapi.com/';
+  url = 'https://fakestoreapi.com/products';
 
   constructor(private httpClient: HttpClient) {}
 
   getAllProducts(): Observable<CardData[]> {
-    return this.httpClient.get<CardData[]>(this.url + 'products');
+    return this.httpClient.get<CardData[]>(this.url);
   }
 
   getProductDetail(id: number): Observable<CardData> {
-    return this.httpClient.get<CardData>(this.url + 'products/' + id);
+    return this.httpClient.get<CardData>(this.url + '/' + id);
+  }
+
+  getCategories(): Observable<string[]> {
+    return this.httpClient.get<string[]>(this.url + '/categories');
   }
 }

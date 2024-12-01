@@ -4,6 +4,7 @@
 
 <div class="tools" *ngIf="!isLoading">
   <app-category [categoryList]="categories" (categoryEvent)="handleCategoryChange($event)"></app-category>
+  <app-cart></app-cart>
 </div>
 
 <div class="cardgrid" *ngIf="!isLoading">

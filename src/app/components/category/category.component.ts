@@ -1,3 +1,4 @@
+import { NgFor } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -11,6 +12,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
+    NgFor,
   ],
   templateUrl: './category.component.html',
   styleUrl: './category.component.scss',

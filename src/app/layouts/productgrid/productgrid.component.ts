@@ -6,6 +6,7 @@ import { ProductCardComponent } from '../../components/product-card/product-card
 import { CardData } from '../../modals/card-data';
 import { CardsDataService } from '../../services/cards-data.service';
 import { CategoryComponent } from '../../components/category/category.component';
+import { CartComponent } from '../../components/cart/cart.component';
 
 @Component({
   selector: 'app-productgrid',
@@ -16,6 +17,7 @@ import { CategoryComponent } from '../../components/category/category.component'
     NgIf,
     MatProgressSpinnerModule,
     CategoryComponent,
+    CartComponent,
   ],
   templateUrl: './productgrid.component.html',
   styleUrl: './productgrid.component.scss',

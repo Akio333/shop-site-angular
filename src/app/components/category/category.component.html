@@ -6,8 +6,6 @@
         {{categories.value}}
       </span>
     </mat-select-trigger>
-    @for (category of categoryList; track category) {
-    <mat-option [value]="category">{{category}}</mat-option>
-    }
+    <mat-option *ngFor="let category of categoryList" [value]="category">{{category}}</mat-option>
   </mat-select>
 </mat-form-field>

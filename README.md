@@ -9,6 +9,7 @@
 - [x] add data fetching
 - [x] add routing
 - [x] add product detail
+- [x] migrate to nx workspace
 - [ ] add search
 - [ ] add cart
 - [ ] add sorting & category
